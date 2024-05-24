@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+/* src/App.css */
+@import url('https://fonts.googleapis.com/css?family=Cabin+Condensed:700');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100%; /* change height to min-height */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: ivory;
+  font-family: 'Cabin Condensed', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  /* change to flex-start */
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body::before {
+  content: "";
+  position: fixed; /* change to fix */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://farm9.staticflickr.com/8760/17195790401_ceeeafcddb_o.jpg') no-repeat center center/cover;
+  opacity: 0.8;
+  z-index: -1; /* Ensure the background is behind all content */
+}
+
+svg {
+  font-weight: bold;
+  max-width: 600px;
+  height: auto;
+}
+
+.hidden {
+  opacity: 0;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9); /* Updated opacity */
+  padding: 10px 20px;
+  margin-bottom: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  width: 100%;
+  height: 60px; /* Reduced height */
+}
+
+.console-container {
+  font-family: 'Cabin Condensed', sans-serif;
+  font-size: 3em; /* Adjusted font size */
+  text-align: center;
+  color: rgb(212, 161, 161); /* Changed text color to red */
+}
+
+.console-underscore {
+  display: inline-block;
+  position: relative;
+  top: -0.14em;
+  left: 10px;
+}
+
+.album-container {
+  text-align: center;
+  padding-bottom: 20px; /* Add some padding to ensure space at the bottom */
+}
+
+.location-text {
+  font-family: 'Cabin Condensed', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.album-gallery {
+  column-count: 5; /* Five columns */
+  column-gap: 15px; /* Gap between columns */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.photo-frame {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.album-image {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.2);
+  display: block;
 }

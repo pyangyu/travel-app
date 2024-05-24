@@ -1,0 +1,62 @@
+  /* .album-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  } */
+
+/* src/components/Album.css */
+@import url('https://fonts.googleapis.com/css?family=Cairo');
+
+.album-container {
+  text-align: center;
+  padding-bottom: 20px; /* Add some padding to ensure space at the bottom */
+}
+
+.location-text {
+    font-family: 'Cairo', sans-serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    font-weight: bold; /* Make text bold */
+    text-shadow: 2px 2px 4px rgba(110, 27, 27, 0.7); /* Add white shadow */
+  }
+
+  .plain-text-emoji {
+    background-image: none;
+    -webkit-background-clip: none;
+    color: #333; /* Ensure emojis are plain text */
+    text-shadow: none; /* Remove text shadow from emojis */
+    font-weight: normal; /* Make sure emojis are not bold */
+  }
+
+.album-gallery {
+  padding-left: 15px;
+  column-count: 5; /* Five columns */
+  column-gap: 15px; /* Gap between columns */
+}
+
+.photo-frame {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.album-image {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.2);
+  display: block;
+}
